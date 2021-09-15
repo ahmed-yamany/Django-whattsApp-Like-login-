@@ -19,8 +19,15 @@ ALLOWED_HOSTS = ['famtam.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    # My Apps
     'users',
+    'codes',
+
+    # imported FrameWorks
     'rest_framework',
+    'bootstrap4',
+
+    # Default
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +47,7 @@ REST_FRAMEWORK = {
     ]
 
 }
+
 AUTH_USER_MODEL = 'users.FamTamUser'
 
 MIDDLEWARE = [

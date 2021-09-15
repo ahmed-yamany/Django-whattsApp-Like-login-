@@ -40,7 +40,7 @@ class FamTamUser(AbstractBaseUser):
     """
 
     phone_regex = RegexValidator(regex=r'(01)[0-9]{9}',
-                                 message="Phone number must be in the format: '201551608020'."
+                                 message="Phone number must be in the format: '01551608020'."
                                          "allowed.")
 
     username = None

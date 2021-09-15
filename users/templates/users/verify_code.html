@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+<form method="post" class="form">
+    {% csrf_token %}
+{#    {% bootstrap_form form %}#}
+  <input type="text" name="code" id="inputEmail" class="form-control" placeholder="Enter Received Code" required>
+
+    {% if errors %}
+      <p>
+        {% for error in errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+  {% endif %}
+
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    {% endbuttons %}
+</form>
+    </form>
+{% endblock %}
