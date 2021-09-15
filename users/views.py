@@ -65,7 +65,7 @@ def verify_code(request):
 
         if not request.POST:
             # send sms
-            send_sms(code_user, user.phone_number)
+            send_sms(code_user, f'2{user.phone_number}')
 
         if form.is_valid():
             sms = form.cleaned_data['code']
