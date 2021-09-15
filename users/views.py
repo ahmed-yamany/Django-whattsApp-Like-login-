@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import RegistraitionForm, CodeForm
 from .models import FamTamUser
+from .utils import send_sms
 
 
 @login_required(login_url='user_register')
@@ -60,10 +61,11 @@ def verify_code(request):
     if phone_number:
         user = FamTamUser.objects.get(phone_number=phone_number)
         code = user.code
+        code_user = f'Hi you code \n {code}'
 
         if not request.POST:
             # send sms
-            pass
+            send_sms(code_user, user.phone_number)
 
         if form.is_valid():
             sms = form.cleaned_data['code']

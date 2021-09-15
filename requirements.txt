@@ -1,11 +1,11 @@
 asgiref==3.4.1
 beautifulsoup4
-dj-database-url==0.5.0
+dj-database-url
 Django==3.2.7
 django-bootstrap4
 django-heroku
 djangorestframework
-gunicorn==20.1.0
+gunicorn
 Pillow
 pytz==2021.1
 soupsieve==2.2.1
